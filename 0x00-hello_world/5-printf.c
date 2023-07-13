@@ -2,9 +2,11 @@
 
 /**
  * main - function print in console
+ *
  * Description: main is importent function
  * to run the c file
- * Return: 0 
+ *
+ * Return: Always 0 (Success) 
  */
 
 int main(void)

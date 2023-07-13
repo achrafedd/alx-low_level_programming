@@ -1,9 +1,8 @@
 #include<stdio.h>
-/*
- * main - Entry point
+/**
+ * main - Print into the console
  *
- * @description: print into the console
- *
+ * Description: print into the console a long string
  * Return: Always 0 (Success)
  */
 

@@ -2,7 +2,6 @@
 
 /**
  * main - function print in console
- *
  * Description: main is importent function
  * to run the c file
  * Return: 0 

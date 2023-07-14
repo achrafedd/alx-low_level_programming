@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-int main(viod)
+int main(void)
 {
 	int lower_case, upper_case;
 

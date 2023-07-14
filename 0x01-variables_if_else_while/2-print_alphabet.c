@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main: Entry piont
+ * main: Print a lower case letters
  *
  * Return: Alwais 0.
  */

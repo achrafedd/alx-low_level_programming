@@ -3,8 +3,6 @@
 /**
  * main: Entry piont
  *
- * description: Print lower case alphabets
- *
  * Return: 0
  */
 

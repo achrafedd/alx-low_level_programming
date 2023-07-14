@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main: Print a lower case letters
+ * main - Print a lower case letters
  *
- * Return: Alwais 0.
+ * Return: 0.
  */
 
 int main(void)

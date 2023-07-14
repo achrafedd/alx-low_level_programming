@@ -3,7 +3,7 @@
 /**
  * main: Entry piont
  *
- * Return: 0
+ * Return: Alwais 0.
  */
 
 int main(void)

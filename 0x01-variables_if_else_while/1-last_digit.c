@@ -5,12 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * author: achraf eddiba
- *
  * main - Entry piont
- *
- * Description: the program create a random number and get
- * the last digit and print a message
  *
  * Return: 0 if the program is run with out bugs
  */

@@ -12,7 +12,7 @@ int main(void)
 
 	while (1)
 	{
-		res = fib1 + fib2;
+		fib_res = fib1 + fib2;
 		if (fib_res > 4000000)
 			break;
 

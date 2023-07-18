@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-	unsigned long fib1 = 0, fib2 = 1, fibres;
+	unsigned long fib1 = 0, fib2 = 1, fib_res;
 	float res;
 
 	while (1)
 	{
 		res = fib1 + fib2;
-		if (fibres > 4000000)
+		if (fib_res > 4000000)
 			break;
 
-		if ((fibres % 2) == 0)
-			res += fibres;
+		if ((fib_res % 2) == 0)
+			res += fib_res;
 
 		fib1 = fib2;
-		fib2 = fibres;
+		fib2 = fib_res;
 	}
 	printf("%.0f\n", res);
 

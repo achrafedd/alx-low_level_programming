@@ -1,31 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
- * main - create random password
+ * main - generate random password
  *
  * Return: 0
  */
+
 int main(void)
 {
-	char pass[16], val;
-	int i;
+    char pass[17];
+    int i, sum = 0, val;
+    
+    srand(time(NULL));
 
-	for (i = 0; i < 16; i++)
-	{
-		val = rand() % 52;
+    for (i = 0; i < 16; i++)
+    {
+        val = rand() % 52;
+        if (val < 26) 
+        {
+            val += 'a';
+        } 
+        else
+        {
+            val -= 26;
+            val += 'A';
+        }
+        pass[i] = val;
+        sum += val;
+    }
 
-		if (val < 26) {
-			val += 'a';
-		} else
-		{
-			val -= 26;
-			val += 'A';
-		}
+    pass[16] = '\0';
+    
+    printf("%s\n", pass);
 
-		pass[i] = val;
-	}
-
-	printf("%s\n", pass);
-	return (0);
+    return (0);
 }

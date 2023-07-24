@@ -1,0 +1,23 @@
+#include "main.h"
+#include <string.h>
+
+/**
+ * print_rev - print string in reversed order
+ *
+ * @s: string
+ *
+ * Return: void
+ */
+void print_rev(char *s)
+{
+	int i;
+
+	i = strlen(s);
+
+	while (i > 0)
+	{
+		_putchar(str[i]);
+		i--;
+	}
+	_putchar('\n');
+}

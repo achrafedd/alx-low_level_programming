@@ -10,30 +10,26 @@
 
 int main(void)
 {
-    char pass[17];
-    int i, sum = 0, val;
-    
-    srand(time(NULL));
+	int pass[100];
+	int i, sum, n;
 
-    for (i = 0; i < 16; i++)
-    {
-        val = rand() % 52;
-        if (val < 26) 
-        {
-            val += 'a';
-        } 
-        else
-        {
-            val -= 26;
-            val += 'A';
-        }
-        pass[i] = val;
-        sum += val;
-    }
+	sum = 0;
 
-    pass[16] = '\0';
-    
-    printf("%s\n", pass);
+	srand(time(NULL));
 
-    return (0);
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+
+	return (0);
 }

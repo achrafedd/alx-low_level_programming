@@ -10,7 +10,7 @@
  */
 void rev_string(char *s)
 {
-	char new_s[strlen(s) -1];
+	char a;
 	int i, j;
 
 	i = strlen(s) - 1;
@@ -18,10 +18,11 @@ void rev_string(char *s)
 
 	while (i >= 0)
 	{
-		new_s[j] = s[i];
+		a = s[j];
+		s[j] = s[i];
+		s[i] = a;		
 		i--;
 		j++;
 	}
 
-	s = new_s;
 }

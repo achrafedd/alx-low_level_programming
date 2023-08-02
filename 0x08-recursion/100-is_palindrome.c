@@ -1,6 +1,16 @@
 #include "main.h"
 #include <string.h>
 
+/**
+ * palindrome - returns 1 if a string is a palindrome and 0 if not.
+ *
+ * @s: string
+ * @i: integer
+ * @j: integer
+ *
+ * Return: 1 if a string is a palindrome and 0 if not
+ */
+
 int palindrome(char *s, int i, int j)
 {
 	if (s[i] == s[j])

@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char n1, n2;
+	int n1, n2;
 
 	if (argc == 1)
 	{

@@ -12,7 +12,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, result = 0;
+	int i, n, result = 0;
+	char *c;
 
 	if (argc == 1)
 	{
@@ -22,9 +23,10 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) != 0 || strcmp(argv[i], "0") == 0)
+		n = strtol(argv[i], &c, 10);
+		if (!*c)
 		{
-			result += atoi(argv[i]);
+			result += n;
 		}
 		else
 		{

@@ -13,7 +13,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int amount, coins, i;
+	int amount, coins;
+	unsigned int i;
 	char *p;
 	int cents[] = {25, 10, 5, 2};
 

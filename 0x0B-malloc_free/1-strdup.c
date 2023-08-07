@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * _strdup - copy a string with malloc
@@ -13,7 +14,7 @@ char *_strdup(char *str)
 	unsigned int i, size = strlen(str);
 	char *x = (char *)malloc(size + 1);
 
-	if (str == NULL || !x)
+	if (!str || !x)
 		return (NULL);
 
 	for (i = 0; i < size; i++)

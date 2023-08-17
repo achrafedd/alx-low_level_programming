@@ -4,7 +4,12 @@
 #include "3-calc.h"
 
 /**
- * 
+ * main - main function
+ *
+ * @ac: arguments count
+ * @av: arguments values
+ *
+ * Return: 0 Alwais
 */
 int main(int ac, char *av[])
 {
@@ -20,7 +25,12 @@ int main(int ac, char *av[])
 
 	op = av[2];
 
-	if (strcmp(op, "+") != 0 && strcmp(op, "-") != 0 && strcmp(op, "*") != 0 && strcmp(op, "/") != 0 && strcmp(op, "%") != 0)
+	if (strcmp(op, "+") != 0 &&
+		strcmp(op, "-") != 0 &&
+		strcmp(op, "*") != 0 &&
+		strcmp(op, "/") != 0 &&
+		strcmp(op, "%") != 0
+	)
 	{
 		printf("Error\n");
 		exit(99);

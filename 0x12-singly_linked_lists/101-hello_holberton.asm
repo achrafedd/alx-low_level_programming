@@ -1,17 +1,21 @@
-section .data
-helloMessage db "Hello, Holberton\n", 0
-
-section .text
 extern printf
-global _start
 
-_start:
-    ; Setup for printf
-    mov rdi, helloMessage  ; First argument (format string)
-    xor rax, rax           ; Clear rax (printf's way of counting SSE registers used for floating point arguments)
-    call printf
+	section .data
+msg: db "Hello world",0
+fmt: db "%s", 10, 0
 
-    ; Exit the program
-    mov rax, 60           ; syscall: exit
-    xor rdi, rdi          ; status = 0
-    syscall
+	section .text
+
+	global main
+main:
+	push rbp
+
+	mov	rdi,fmt
+	mov	rsi,msg
+	mov	rax,0
+	call printf
+
+	pop rbp
+
+	mov rax,0
+	ret

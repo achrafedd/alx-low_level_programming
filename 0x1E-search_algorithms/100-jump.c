@@ -1,15 +1,15 @@
 #include "search_algos.h"
 
 /**
-* jump_search - search for a value in the array with
-* jump search algorithm
-*
-* @array: the array
-* @size: the size of the array
-* @value: value to be found
-*
-* Return: the first index in the array or -1 if not found
-*/
+ * jump_search - search for a value in the array with
+ * jump search algorithm
+ *
+ * @array: the array
+ * @size: the size of the array
+ * @value: value to be found
+ *
+ * Return: the first index in the array or -1 if not found
+ */
 int jump_search(int *array, size_t size, int value)
 {
 	int index, m, k, prev;
@@ -21,7 +21,8 @@ int jump_search(int *array, size_t size, int value)
 	k = 0;
 	prev = index = 0;
 
-	do {
+	do
+	{
 		printf("Value checked array[%d] = [%d]\n", index, array[index]);
 
 		if (array[index] == value)

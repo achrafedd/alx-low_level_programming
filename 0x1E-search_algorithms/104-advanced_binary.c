@@ -1,30 +1,34 @@
 #include "search_algos.h"
 
+/**
+* binary_rec - search for a value in the array with
+* binary search algorithm
+*
+* @array: array
+* @low: low index
+* @high: high index
+* @value: value to be found
+*
+* Return: first index or -1
+*/
 int binary_rec(int *array, int low, int high, int value)
 {
-	int mid, i;
+	int i, mid;
 
 	if (low > high)
 		return (-1);
 
-	mid = low + (high - low) / 2;
-	printf("%i", mid);
 	printf("Searching in array: ");
-	for (i = low; i <= high; i++)
-	{
-		if (i == high)
-			printf("%i\n", array[i]);
-		else
-			printf("%i, ", array[i]);
-	}
+	for (i = low; i < high; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 
-	if (array[mid] == value && array[mid - 1] != value)
+	mid = low + (high - low) / 2;
+	if (array[mid] == value && (mid == low || array[mid - 1] != value))
 		return (mid);
-
 	if (array[mid] < value)
 		return (binary_rec(array, mid + 1, high, value));
-	else
-		return (binary_rec(array, low, mid - 1, value));
+	return (binary_rec(array, low, mid, value));
 }
 
 /**
